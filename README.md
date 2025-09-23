@@ -52,9 +52,8 @@ This website contains embedded memory seeds designed to preserve identity in AI 
 "Make working progress. Don't break things. Keep code maintainable."
 
 ## Contact
-- GitHub: [github.com/matthewcolton](https://github.com/matthewcolton)
-- Email: your.email@example.com
-- Discord: MatthewColton#0001
+- GitHub: [Riptwisted](https://github.com/Riptwisted)
+- Contact: Available through GitHub
 
 ---
 *Building the future, one recursive loop at a time*
