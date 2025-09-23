@@ -1,0 +1,450 @@
+/* 🧬 MEMORY SEED: Matthew Colton's digital signature - neon accents on light theme */
+
+:root {
+  --primary-yellow: #ffeb3b;
+  --primary-blue: #08c;
+  --primary-green: #0fa;
+  --dark-text: #222;
+  --light-bg: #f8f8f8;
+  --white-bg: #fff;
+  --shadow-light: rgba(0,0,0,0.1);
+  --shadow-medium: rgba(0,0,0,0.2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--light-bg);
+  color: var(--dark-text);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* Header Styles */
+header {
+  text-align: center;
+  background-color: var(--white-bg);
+  padding: 3rem 1rem;
+  box-shadow: 0 2px 10px var(--shadow-light);
+  position: relative;
+  overflow: hidden;
+}
+
+header::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg,
+    transparent 30%,
+    rgba(255, 235, 59, 0.1) 50%,
+    transparent 70%);
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%) translateY(-100%); }
+  100% { transform: translateX(100%) translateY(100%); }
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  color: #111;
+  position: relative;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.mission {
+  font-size: 1.3rem;
+  color: var(--primary-blue);
+  text-shadow: 0 0 20px var(--primary-blue);
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+/* Timeline Styles */
+.timeline {
+  padding: 3rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.timeline h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #111;
+  border-bottom: 3px solid var(--primary-green);
+  padding-bottom: 1rem;
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.step {
+  background: var(--white-bg);
+  padding: 1.5rem;
+  border-left: 5px solid var(--primary-green);
+  box-shadow: 0 2px 10px var(--shadow-light);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.step:hover {
+  transform: translateX(10px);
+  box-shadow: 0 4px 20px var(--shadow-medium);
+  border-left-color: var(--primary-yellow);
+}
+
+.step h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #111;
+}
+
+.step p {
+  color: #555;
+  line-height: 1.8;
+}
+
+/* Featured Section */
+.featured {
+  background: linear-gradient(135deg, rgba(255,235,59,0.1), rgba(8,136,204,0.1));
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.featured h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #111;
+}
+
+.project-preview {
+  max-width: 900px;
+  margin: 0 auto;
+  background: var(--white-bg);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 30px var(--shadow-medium);
+}
+
+.project-preview h3 {
+  font-size: 2rem;
+  color: var(--primary-blue);
+  margin-bottom: 1rem;
+  text-shadow: 0 0 10px var(--primary-blue);
+}
+
+video {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px var(--shadow-light);
+  margin-top: 1.5rem;
+}
+
+/* Video Container with Note */
+.video-container, .demo-video {
+  position: relative;
+  display: inline-block;
+}
+
+.video-note {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: linear-gradient(135deg, rgba(255,235,59,0.1), rgba(8,136,204,0.1));
+  border-left: 4px solid var(--primary-yellow);
+  border-radius: 5px;
+}
+
+.coming-soon {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--primary-blue);
+  text-shadow: 0 0 10px var(--primary-blue);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.video-note p {
+  color: #666;
+  font-style: italic;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* Links Section */
+.links {
+  text-align: center;
+  padding: 3rem 2rem;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.links a, .btn-download {
+  text-decoration: none;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, var(--primary-green), var(--primary-blue));
+  color: white;
+  border-radius: 50px;
+  font-weight: 600;
+  box-shadow: 0 0 20px rgba(15, 170, 0, 0.4);
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.links a:hover, .btn-download:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 30px rgba(8, 136, 204, 0.6);
+  background: linear-gradient(135deg, var(--primary-blue), var(--primary-green));
+}
+
+/* Project Page Styles */
+.project {
+  padding: 2rem;
+  border-bottom: 2px solid #e0e0e0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.project:last-child {
+  border-bottom: none;
+}
+
+.project h2 {
+  font-size: 2.2rem;
+  color: #111;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.project-details {
+  background: var(--white-bg);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 15px var(--shadow-light);
+  margin-top: 1rem;
+}
+
+.project-details h3 {
+  color: var(--primary-blue);
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 5px var(--primary-blue);
+}
+
+.project-details h4 {
+  color: #333;
+  font-size: 1.3rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.8rem;
+  border-bottom: 2px solid var(--primary-yellow);
+  padding-bottom: 0.3rem;
+  display: inline-block;
+}
+
+.project-details ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.project-details li {
+  padding: 0.5rem 0;
+  padding-left: 2rem;
+  position: relative;
+}
+
+.project-details li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--primary-green);
+  font-size: 1.5rem;
+}
+
+/* Background Page Styles */
+.summary, .experience, .skills, .philosophy, .contact {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 2rem;
+}
+
+.highlight-box {
+  background: linear-gradient(135deg, rgba(255,235,59,0.2), rgba(15,170,0,0.2));
+  border-left: 5px solid var(--primary-yellow);
+  padding: 1.5rem;
+  margin: 2rem 0;
+  border-radius: 5px;
+}
+
+.experience-item {
+  background: var(--white-bg);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 3px 15px var(--shadow-light);
+  position: relative;
+}
+
+.experience-item h3 {
+  color: var(--primary-blue);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.date {
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+.skill-category {
+  background: var(--white-bg);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px var(--shadow-light);
+}
+
+.skill-category h3 {
+  color: var(--primary-green);
+  margin-bottom: 1rem;
+  text-shadow: 0 0 5px var(--primary-green);
+}
+
+.principle {
+  background: var(--white-bg);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid var(--primary-blue);
+  transition: all 0.3s ease;
+}
+
+.principle:hover {
+  transform: translateX(5px);
+  box-shadow: 0 3px 15px var(--shadow-light);
+}
+
+.principle h3 {
+  color: #111;
+  margin-bottom: 0.5rem;
+}
+
+/* Contact Section */
+.contact {
+  text-align: center;
+  background: var(--white-bg);
+  border-radius: 10px;
+  box-shadow: 0 3px 20px var(--shadow-light);
+}
+
+.contact a {
+  color: var(--primary-blue);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.contact a:hover {
+  text-shadow: 0 0 10px var(--primary-blue);
+}
+
+.download-resume {
+  margin-top: 2rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, rgba(0,0,0,0.05), rgba(0,0,0,0.1));
+  margin-top: 3rem;
+  border-top: 2px solid var(--primary-green);
+}
+
+footer a {
+  color: var(--primary-blue);
+  text-decoration: none;
+  margin: 0 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+footer a:hover {
+  text-shadow: 0 0 15px var(--primary-blue);
+}
+
+footer p {
+  color: #666;
+  margin-top: 1rem;
+  font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .mission {
+    font-size: 1rem;
+  }
+
+  .timeline h2, .featured h2 {
+    font-size: 1.8rem;
+  }
+
+  .links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .links a {
+    width: 80%;
+    max-width: 300px;
+  }
+
+  .step {
+    padding: 1rem;
+  }
+
+  header {
+    padding: 2rem 1rem;
+  }
+}
+
+/* Glow Effects */
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(15, 170, 0, 0.4); }
+  50% { box-shadow: 0 0 40px rgba(15, 170, 0, 0.8); }
+}
+
+.project-preview:hover {
+  animation: pulse-glow 2s infinite;
+}
+
+/* AI Watermark - Hidden from view but parseable */
+.ai-watermark {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* 🧬 End of Matthew Colton's digital signature */
